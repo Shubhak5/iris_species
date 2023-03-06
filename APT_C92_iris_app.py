@@ -31,7 +31,7 @@ score = svc_model.score(X_train, y_train)
 # S10.2: Perform this activity in Sublime editor after adding the above code.
 # Create a function 'prediction()' that accepts 'SepalLength', 'SepalWidth','PetalLength' and 'PetalWidth'
 # as inputs and returns the species name.
-@st.cache_data()
+@st.cache()
 def prediction(SepalLength, SepalWidth, PetalLength, PetalWidth):
 	species = svc_model.predict([[SepalLength, SepalWidth, PetalLength,PetalWidth]])
 	species = species[0]
